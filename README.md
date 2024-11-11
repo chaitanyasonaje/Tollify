@@ -1,219 +1,81 @@
-# Toll_Management_System
+# 🚗 Tollify  🚗
 
-Toll Management System to manage toll plaza and vehicle passes using bootstrap,Nodejs,MongoDb!!
+Toll Management System to manage toll plaza and vehicle passes using **Bootstrap**, **Node.js**, **MongoDB**!
 
-## How To Run?
+## ✨ Features
 
-To run this website run this command on command prompt on root folder.
+- 🔄 **Dynamic Data**: Powered by **Mongoose** for real-time database interactions.
+- 👥 **Role-Based Views**: Different views for Admin and Staff to manage toll operations effectively.
+- 🏢 **Manage Entire Toll Plaza**: Admin can monitor all toll activities and make real-time updates.
+- 📊 **Sales Reports**: View and manage toll sales month-wise with visual reports and statistics.
+- 📱 **Responsive Layout**: Optimized for both desktop and mobile use with a clean and modern design.
+- 🗂 **Report Management**: Track and manage toll transactions, passes, and receipts.
+- 🔓 **Open Source**: Free to use and customize for your toll management needs.
 
-```
-npm start or node app.js
-```
+## 🚀 Key Highlights
 
-It will run under the url http://127.0.0.1:3000/
+- **Efficient Toll Monitoring**: The system provides a central platform to track all toll plaza activities, payments, and penalties.
+- **User-Friendly Interface**: Simple and intuitive UI for both users and operators, ensuring a smooth experience.
+- **Data Visualization**: Built-in support for generating and viewing dynamic graphs and reports for better decision-making.
 
-## Login Details
+## 💻 Tech Stack
 
-Email and Password for Website:<br>
+- **Frontend**: 
+  - HTML, CSS, Bootstrap (for responsive and modern UI)
+  - EJS (for dynamic templating)
+- **Backend**: 
+  - Node.js with Express (for backend routing and server management)
+  - Mongoose (for database interaction with MongoDB)
+- **Database**: MongoDB (for storing user data, passes, receipts, and reports)
+- **Security**: bcrypt for password encryption and secure authentication
+- **Session Management**: Express-session for maintaining user sessions during login
 
-Admin :<br>
-Email :admin@cq.com<br>
-Password: admincq<br>
+## 📂 Directory Structure
 
-User:<br>
-Email : bro@gmail.com<br>
-Password: admincq<br>
+- **Controller**: Handles routing and business logic for Admin, Login, and Staff.
+- **Models**: Contains Mongoose schemas for Categories, Passes, Receipts, and Users.
+- **Public**: Static assets like CSS, images, and JavaScript files.
+- **Routes**: Defines the routing logic for the application.
+- **Server.js**: Starts the server and connects to MongoDB.
+- **Services**: Contains business logic for Admin, Login, and Staff functionalities.
+- **Views**: Contains **EJS** templates for dynamic pages (e.g., dashboard, pass management, receipts).
 
-Email :ajay@cq.com<br>
-Password: admincq<br>
+## ⚙️ How It Works?
 
-## Features
-<ul>
-  <li>Dynamic Data by mongoose database</li>
-  <li>Different Views for Admin and Staff</li> 
-  <li>Manage Whole Toll Plaza</li>
-  <li>Manage Reports and Passes</li>
-  <li>Month wise Sales Report</li>
-  <li>Responsive Layout</li>
-  <li>Mobile Friendly</li>
-  <li>Open Source</li>
-</ul>
+### Admin Panel
+- 📈 **Dashboard**: View overall statistics like total toll collection, active passes, and more.
+- 📝 **Manage Users**: Admin can add, edit, or delete users and assign roles.
+- 📊 **Sales Report**: View detailed month-wise toll collection data, with graphical representation.
+- 🛠 **Toll Management**: Update toll rates, manage booth statuses, and generate receipts.
 
-## How to Use ?
-<ol type="number">
-<li>Use mongorestore command to add database to your Local Machine.</li>
-<li>Run Mongo Server</li>
-<li>Run Server File app.js</li>
-<li>Run local host on port number 3000</li>
-</ol>
-
-## Pre-requisites
-
-- Node JS (Tested on v12.14.0)
-- Mongoose
-- Pre-requisites or Dependencies(Below)
-
-## Extra Dependencies :
-
-<ul>
-  <li>Mongoose</li>
-  <li>Express</li>
-  <li>Express-Session</li>
-  <li>PATH</li>
-  <li>EJS</li>
-  <li>EJS Mate</li>
-  <li>Bcrypt Module</li>
-  <li>HTTP</li>
-</ul>
-
-- Express
-
-```
-npm install express
-```
-
-- EJS
-
-```
-npm install ejs
-```
-
-- Express-Session
-
-```
-npm install express-session
-```
-
-- Mongoose
-
-```
-npm install mongoose
-```
-
-- Dotenv
-
-```
-npm install dotenv
-```
-
-- Bcrypt
-
-```
-npm install bcrypt  / npm i bcrypt
-```
+### Staff Panel
+- 🚗 **Manage Passes**:  renew, and update the passes of user.
+- 🧾 **Manage Transactions**: Manage payments and toll usage.
 
 
-## Schema
+## 📝 Roadmap
 
-<h4><b>User Schema</b></h4>
+Future improvements to the Toll Management System:
 
-| Name         | Type   | Required | Unique | Encrpyted |
-| ------------ | ------ | -------- | ------ | --------- |
-| Name         | String | Yes      | No     | No        |
-| Email        | String | Yes      | Yes    | No        |
-| Password     | String | Yes      | No     | Yes       |
-| Address      | String | No       | No     | No        |
-| City         | String | Yes      | No     | No        |
-| Gender       | String | Yes      | No     | No        |
-| Role         | String | Yes      | No     | No        |
-| Phone        | String | No       | No     | No        |
+- **Real-Time Traffic Monitoring**: Integrate with sensors or APIs to track traffic and provide live updates.
+- **Mobile App Integration**: Develop a mobile app for users to access and manage their toll passes and payments.
+- **Advanced Data Analytics**: Implement predictive analytics to help toll operators forecast traffic patterns and optimize resource management.
 
-<h4><b>Category Schema</b></h4>
+## 💡 Contributing
 
-| Name          | Type   |
-| ------------- | ------ |
-| Name          | String |
-| Status        | String |
-| CreateBy      | String |
+We welcome contributions! If you'd like to improve the project or add new features, please fork the repository and submit a pull request.
 
-<h4><b>Pass Schema</b></h4>
+### How to Contribute:
+1. Fork the repo and create a new branch (`git checkout -b feature-branch`).
+2. Make your changes and commit them (`git commit -am 'Add new feature'`).
+3. Push to your branch (`git push origin feature-branch`).
+4. Create a new pull request.
 
-| Name          | Type   |
-| ------------- | ------ |
-| Category      | String |
-| Registration  | String |
-| IssueDate     | Date   |
-| Name          | String |
-| Age           | String |
-| Address       | String |
-| Phone         | String |
-| Balance       | Number |
+## 🤝 Acknowledgements
 
-<h4><b>Receipt Schema</b></h4>
+- Thanks to the **Node.js** and **MongoDB** communities for providing the tools that made this project possible.
+- Special thanks to the open-source contributors whose libraries were used in this project.
 
-| Name          | Type   |
-| ------------- | ------ |
-| Category      | String |
-| vehicleNumber | String |
-| entryDate     | String |
-| entryTime     | String |
-| receiptdate   | Date   |
-| trip          | String |
-| cost          | Number |
+---
 
-
-
-## Directory
-
-```bash
-|___ Root
-|   |
-|   |--- Controller
-|   |    |--- Admin.js
-|   |    |--- Login.js
-|   |    |--- Staff.js
-|   |
-|   |--- Dump (Mongoose Dump) (Dump)
-|   |
-|   |--- Middlewares
-|   |    |--- auth.js
-|   |
-|   |--- Models
-|   |    |--- CategorySchema.js
-|   |    |--- PassSchema.js
-|   |    |--- ReceiptSchema.js
-|   |    |--- UserSchema.js
-|   |
-|   |--- Public
-|   |    |--- css (Static)
-|   |    |--- images (Staic)
-|   |    |--- js (Static)
-|   |
-|   |--- Routes
-|   |    |--- Handlers
-|   |    |    |--- Admin.ejs
-|   |    |    |--- Login.ejs
-|   |    |    |--- Staff.ejs
-|   |    |--- index.js
-|   |
-|   |--- Server.js
-|   |
-|   |--- Services
-|   |    |--- Admin.js
-|   |    |--- Login.js
-|   |    |--- Staff.js
-|   |
-|   |--- Views
-|   |    |--- layout
-|   |    |    |--- layout.ejs
-|   |    | 
-|   |    |--- partials
-|   |    |    |--- footbar.ejs
-|   |    |    |--- header.ejs
-|   |    |    |--- navbar.ejs
-|   |    | 
-|   |    |--- add_pass.ejs
-|   |    |--- add_staff.ejs
-|   |    |--- addReceipt.ejs
-|   |    |--- changePassword.ejs
-|   |    |--- dashboard.ejs
-|   |    |--- login.ejs
-|   |    |--- manage_pass.ejs
-|   |    |--- manage_staff.ejs
-|   |    |--- manageReceipt.ejs
-|   |    |--- passCount.ejs
-|   |    |--- passSales.ejs
-|   |    |--- passUser.ejs
-|   |    |--- receiptCount.ejs
-|   |    |--- receiptSales.ejs
-```
+Let’s make toll management smarter and more efficient! 🚀
